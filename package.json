@@ -18,6 +18,7 @@
   "homepage": "https://github.com/3vs3/TeamMission#readme",
   "dependencies": {
     "body-parser": "^1.17.2",
-    "express": "^4.15.3"
+    "express": "^4.15.3",
+    "mariasql": "^0.2.6"
   }
 }
