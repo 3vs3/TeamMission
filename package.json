@@ -1,0 +1,23 @@
+{
+  "name": "3vs3-team-page",
+  "version": "1.0.0",
+  "description": "3vs3 team page",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/3vs3/TeamMission.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/3vs3/TeamMission/issues"
+  },
+  "homepage": "https://github.com/3vs3/TeamMission#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3"
+  }
+}
