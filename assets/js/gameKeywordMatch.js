@@ -4,10 +4,7 @@
 
 $(function(){
 
-    console.log('start gameKeywordMatch Game');
-    // 키워드 보여주기
-    var arrKeywordBoyeon = ["CGV 5년간 VIP", "오늘도 나는 배가 고프다", "볼링", "인도", "배낭여행", "택시타는 것을 매우 싫어함", "몽니 (인디밴드)",
-                            "자비에돌란", "갓헬프더걸", "죽음의 수용소"];
+    var arrKeywordBoyeon = ["CGV 5년간 VIP", "오늘도 나는 배가 고프다", "볼링", "인도", "배낭여행", "택시타는 것을 매우 싫어함", "몽니 (인디밴드)","자비에돌란", "갓헬프더걸", "죽음의 수용소"];
     var arrKeyword2da = ["안드로이드", "픽시", "서핑", "익스트림", "음악", "중국", "새로운 것", "재밌게 살자", "나는 아직 더 까매질수있다(?)", "아마추어 경륜대회"];
     var arrKeywordDongju = ["비전공자", "비개발자", "법학도", "우주비행사", "크리스토퍼 놀란", "만화책", "아이돌", "덕후는아니라능", "디지털노마드", "미니멀리스트"];
     var arrKeywordJaejin = ["대학생", "연구실","음악듣기", "Jazz hiphop", "이상하고 특이한것", "막창","치킨", "배드민턴", "족구", "크레이지닭 인형( 꽤애애ㅐ애애액 )"];
@@ -25,10 +22,70 @@ $(function(){
 
     // 멤버 키워드 맞추기 게임
     function gameKeywordMatch() {
-        var keyword = arrKeywordTeam[arrMemberNames[getRandomInt(0,3)]][getRandomInt(0,9)];
-        var node = '<p style="text-align: center; font-size:'+getRandomInt(50,100)+'px; margin: 0 auto; ">'+keyword+'</p>';
-        $('#divTxtKeyword').html('').append(node);
-        console.log(keyword);
+        getGameTxt();
+        var gameCnt = 0;
+
+        function getGameTxt(){
+
+            var keyword = arrKeywordTeam[arrMemberNames[getRandomInt(0,3)]][getRandomInt(0,9)];
+            var node = '<p style="text-align: center; font-size:'+getRandomInt(50,100)+'px; margin: 0 auto; ">'+keyword+'</p>';
+            $('#divTxtKeyword').html('').append(node);
+
+            $('.memberImg').off('click').on('click',function () {
+
+                var memberName = $(this).attr('id');
+                if(checkKeywordRight(keyword, memberName)){
+                    // 맞으면
+                    userScore.setScore(1);
+                }else{
+                    // 틀리면
+                };
+
+                gameCnt++;
+                if(gameCnt > 9){
+                    // 게임 10회
+                    finishGame(userScore.getScore());
+                    return;
+                }else{
+                    getGameTxt();
+                }
+            });
+        }
+
+        var userScore = Score();
+        function Score() {
+            var score = 0;
+            return {
+                getScore: function() {
+                    return score;
+                },
+                setScore: function(num) {
+                    score += num;
+                    //console.log('score :' + score);
+                }
+            }
+        }
+    }
+
+    // 게임 끝
+    function finishGame(score) {
+        if(score > 4){
+            alert(score + '점을 획득하셨군요 통과입니다');
+            // 스탬프 증가 함수 콜
+        }else{
+            alert(score + '점으로 아쉽게 스탬프 획득을 실패하였습니다');
+        }
+    }
+    
+    // 키워드 체크
+    function checkKeywordRight(keword, memberName){
+        for(var idx in arrKeywordTeam[memberName]){
+            if(keword == arrKeywordTeam[memberName][idx] ){
+                //console.log(arrKeywordTeam[memberName][idx]);
+                return true;
+            }
+        }
+        return false;
     }
 
     // 멤버 키워드 출력
@@ -42,11 +99,11 @@ $(function(){
                         var keyword = '';
                         var arrTxtColor = ['yellow', 'green','pink','blue'];
                         if(y==0){
-                            console.log(changeEngNameToKorName(arrMemberNames[x]));
+                            //console.log(changeEngNameToKorName(arrMemberNames[x]));
                             keyword = changeEngNameToKorName(arrMemberNames[x]);
                             txtColor = arrTxtColor[getRandomInt(0,3)];
                         }else{
-                            console.log(x,y,tmpY,arrKeywordTeam[arrMemberNames[x]][tmpY-1]);
+                            //console.log(x,y,tmpY,arrKeywordTeam[arrMemberNames[x]][tmpY-1]);
                             keyword = arrKeywordTeam[arrMemberNames[x]][tmpY-1];
                             txtColor = 'black'
                         }
@@ -59,9 +116,9 @@ $(function(){
                                 $('#divKeyword').html('');
                                 $('#divKeywordGameStart').show();
                                 gameKeywordMatch();
-                            },200);
+                            },2);
                         }
-                    }, 2200*(x)+200*(y));
+                    }, 22*(x)+2*(y));
                 })(i,j);
             }
         }

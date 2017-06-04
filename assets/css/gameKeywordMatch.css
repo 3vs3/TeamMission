@@ -5,3 +5,16 @@
 #divTxtKeyword {
     margin-top: 50px;
 }
+
+#divMemberImg{
+    max-width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+.memberImg{
+    width:100%;
+    max-width:170px;
+    vertical-align: middle;
+    margin: 0 auto;
+}
