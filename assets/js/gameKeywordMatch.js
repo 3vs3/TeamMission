@@ -59,9 +59,9 @@ $(function(){
                                 $('#divKeyword').html('');
                                 $('#divKeywordGameStart').show();
                                 gameKeywordMatch();
-                            },2);
+                            },200);
                         }
-                    }, 22*(x)+2*(y));
+                    }, 2200*(x)+200*(y));
                 })(i,j);
             }
         }
