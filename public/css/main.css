@@ -1629,3 +1629,75 @@
 		body.is-loading #footer {
 			opacity: 0;
 		}
+
+/* Card Game */
+
+	#container {
+  	padding-left: 0px;
+  	width: 1600;
+  	margin: 10px auto; }
+  #container:after {
+  	content: "";
+  	display: table;
+  	clear: both; }
+
+	[data-view="card"] {
+	  align-items: center;
+	  transform: rotateY(180deg);
+	  width: 120px;
+	  height: 120px;
+	  border: solid 1px #d3cece;
+	  border-radius: 5px;
+	  float: left;
+	  margin: 10px;
+	  cursor: pointer;
+	  background: linear-gradient(135deg, #f3f3f3 22px, #fff 22px, #fff 24px, transparent 24px, transparent 67px, #fff 67px, #fff 69px, transparent 69px), linear-gradient(225deg, #f3f3f3 22px, #fff 22px, #fff 24px, transparent 24px, transparent 67px, #fff 67px, #fff 69px, transparent 69px) 0 64px;
+	  background-color: #f3f3f3;
+	  background-size: 64px 128px; }
+
+	.flipped {
+	  transition: 0.6s;
+	  transform-style: preserve-3d;
+	  position: relative;
+	  transform: rotateY(0deg); }
+
+	.reverse {
+	  transition: 0.6s;
+	  transform-style: preserve-3d;
+	  position: relative;
+	  transform: rotateY(180deg); }
+
+	.correct {
+	  opacity: .5;
+	  cursor: default;
+	  transform-style: preserve-3d;
+	  position: relative;
+	  transform: rotateY(0deg); }
+
+		/* Icons */
+	.correct[data-item="dongju_card"],
+	.flipped[data-item="dongju_card"] {
+	  background: url("../../images/dongju.png") left center no-repeat #fff;
+	  background-size: contain; }
+
+	.correct[data-item="boyeon_card"],
+	.flipped[data-item="boyeon_card"] {
+	  background: url("../../images/boyeon.png") left center no-repeat #fff;
+	  background-size: contain; }
+
+	.correct[data-item="daeun_card"],
+	.flipped[data-item="daeun_card"] {
+	  background: url("../../images/daeun.png") left center no-repeat #fff;
+	  background-size: contain; }
+
+	.correct[data-item="jaejin_card"],
+	.flipped[data-item="jaejin_card"] {
+	  background: url("../../images/jaejin.png") left center no-repeat #fff;
+	  background-size: contain; }
+
+	.correct[data-item="test_card"],
+	.flipped[data-item="test_card"] {
+	  background: url("../../images/testimage.png") left center no-repeat #fff;
+	  background-size: contain; }
+
+	/*# sourceMappingURL=card2.css.map */

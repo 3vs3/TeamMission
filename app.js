@@ -2,8 +2,14 @@ var express = require('express');
 var path    = require("path");
 var bodyParser = require("body-parser");
 //routes 의 (name).js 파일 선언
+//1단계 : main
 var main = require('./routes/main');
+//2단계 : keyword
+var keyword = require('./routes/keyword');
+//5단계 : 게시판
 var board = require('./routes/board');
+//패자부활전
+var ladder = require('./routes/ladder');
 var app = express();
 
 //appRoot Path 전역변수 지정
@@ -26,8 +32,14 @@ app.use(bodyParser.urlencoded({extended:false}));
 //메인
 app.get('/', main.welcome);
 
+//2단계 : 키워드 매칭
+app.get('/keyword', keyword.matchingGame);
+
 //4단계 : 게시판
 app.get('/board', board.showBoardList);
+
+//패자부활전 : 사다리게임
+app.get('/ladder', ladder.startGame);
 
 //서버 구동
 app.listen(3000, function() {

@@ -41,7 +41,7 @@
 								<li class="char">
 									<a href="#boyeon">
 										<div class="test">보연</br>
-											<img class="charimage" src="images/testimage.png" />
+											<img class="charimage" src="images/보연.jpeg" />
 
 										</div>
 									</a>
@@ -49,21 +49,21 @@
 								<li class="char">
 									<a href="#Dongju">
 										<div class="test">동주</br>
-											<img class="charimage" src="images/testimage.png" />
+											<img class="charimage" src="images/동주.jpeg" />
 										</div>
 									</a>
 								</li>
 								<li class="char">
 									<a href="#Daeun">
 										<div class="test">다은</br>
-											<img class="charimage" src="images/testimage.png" />
+											<img class="charimage" src="images/다은.jpeg" />
 										</div>
 									</a>
 								</li>
 								<li class="char">
 									<a href="#Jaejin">
 										<div class="test">재진</br>
-											<img class="charimage" src="images/testimage.png" />
+											<img class="charimage" src="images/재진.png" />
 										</div>
 									</a>
 								</li>
@@ -80,7 +80,7 @@
 							<article id="boyeon">
 								<h2 class="major">Boyeon</h2>
 								<div class="left">
-									<img class="choiceimage" src="images/testimage.png" />
+									<img class="choiceimage" src="images/보연.jpeg" />
 								</div>
 								<div class="light">
 									<div>
@@ -122,7 +122,7 @@
 							<article id="Dongju">
 								<h2 class="major">Dongju</h2>
 								<div class="left">
-									<img class="choiceimage" src="images/testimage.png" />
+									<img class="choiceimage" src="images/동주.jpeg" />
 								</div>
 								<div class="light">
 									<div>
@@ -164,7 +164,7 @@
 							<article id="Daeun">
 								<h2 class="major">Daeun</h2>
 								<div class="left">
-									<img class="choiceimage" src="images/testimage.png" />
+									<img class="choiceimage" src="images/다은.jpeg" />
 								</div>
 								<div class="light">
 									<div>
@@ -206,7 +206,7 @@
 							<article id="Jaejin">
 								<h2 class="major">Jaejin</h2>
 								<div class="left">
-									<img class="choiceimage" src="images/testimage.png" />
+									<img class="choiceimage" src="images/재진.png" />
 								</div>
 								<div class="light">
 									<div>
@@ -243,6 +243,130 @@
 									</div>
 								</div>
 							</article>
+
+<!-- #3 page_Card Game -->
+						<article id="cardgame">
+
+						  	<h1>얼굴 맞추기 게임</h1>
+						  	<h3>카드 하나를 클릭하여 시작하세요.</h3>
+						  	<p><span id="seconds">00</span>:<span id="tens">00</span></p>
+						  	<p id ="text"></p>
+						  	<div id="container">
+						    <script>
+						    var myCards = document.getElementById('container');
+						    var resultsArray = [];
+						    var counter = 0;
+						    var text = document.getElementById('text');
+						    var seconds = 00;
+						    var tens = 00;
+						    var appendTens = document.getElementById("tens");
+						    var appendSeconds = document.getElementById("seconds");
+						    var Interval ;
+						    var images = [
+						      'dongju_card',
+						      'boyeon_card',
+						      'daeun_card',
+						      'jaejin_card',
+						  //    'test_card'
+						    ];
+
+						    var clone = images.slice(0); // duplicate array
+						    var cards = images.concat(clone); // merge to arrays
+
+						    // Shufffel function
+						    function shuffle(o){
+						      for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i],   o[i] = o[j], o[j] = x);
+						      return o;
+						    }
+						    shuffle(cards);
+
+						    for (var i = 0; i < cards.length; i++) {
+						      card = document.createElement('div');
+						      card.dataset.item = cards[i];
+						      card.dataset.view = "card";
+						      myCards.appendChild(card);
+
+						      card.onclick = function () {
+
+						        if (this.className != 'flipped' && this.className != 'correct'){
+						            this.className = 'flipped';
+						            var result = this.dataset.item;
+						            resultsArray.push(result);
+						            clearInterval(Interval);
+						            Interval = setInterval(startTimer, 10);
+						        }
+
+						        if (resultsArray.length > 1) {
+
+						          if (resultsArray[0] === resultsArray[1]) {
+						            check("correct");
+						            counter ++;
+						            win();
+						            resultsArray = [];
+						          } else {
+						            check("reverse");
+						            resultsArray = [];
+						          }
+
+						        }
+
+						      }
+
+						    };
+
+
+						    var check = function(className) {
+
+						      var x = document.getElementsByClassName("flipped");
+						      setTimeout(function() {
+
+						        for(var i = (x.length - 1); i >= 0; i--) {
+						          x[i].className = className;
+						        }
+
+						      },500);
+
+						    }
+
+						    var win = function () {
+
+						      if(counter === 4) {
+						        clearInterval(Interval);
+						        text.innerHTML = "당신의 기록은 " + seconds + ":" + tens;
+						      }
+
+						    }
+
+						    function startTimer () {
+						      tens++;
+
+						      if(tens < 9){
+						        appendTens.innerHTML = "0" + tens;
+						      }
+
+						      if (tens > 9){
+						        appendTens.innerHTML = tens;
+
+						      }
+
+						      if (tens > 99) {
+						        seconds++;
+						        appendSeconds.innerHTML = "0" + seconds;
+						        tens = 0;
+						        appendTens.innerHTML = "0" + 0;
+						      }
+
+						      if (seconds > 9){
+						        appendSeconds.innerHTML = seconds;
+						      }
+
+						    }
+
+						    </script>
+						  </div>
+
+          </article>
+
 
 
 						<!-- Contact -->
