@@ -1,0 +1,17 @@
+*****************게시판 테이블 생성 쿼리**********************************
+
+CREATE TABLE `board` (
+	`_id` INT(11) NOT NULL AUTO_INCREMENT,
+	`user_name` VARCHAR(20) NOT NULL COMMENT '사용자 아이디',
+	`selected_character` VARCHAR(20) NOT NULL COMMENT 'boyeon: 보연, daeun : 다은, jeajin: 재진, dongju : 동주',
+	`comment` VARCHAR(100) NULL DEFAULT '' COMMENT '댓글내용',
+	`duration` TIME NOT NULL DEFAULT '00:00:00' COMMENT '게임진행시간',
+	`reg_time` DATETIME NOT NULL DEFAULT '',
+	PRIMARY KEY (`_id`),
+	INDEX `_id` (`_id`)
+)
+COMMENT='rank board'
+COLLATE='utf8_general_ci'
+ENGINE=InnoDB
+AUTO_INCREMENT=4
+;
