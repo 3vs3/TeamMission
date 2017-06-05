@@ -6,6 +6,8 @@ var bodyParser = require("body-parser");
 var main = require('./routes/main');
 //2단계 : keyword
 var keyword = require('./routes/keyword');
+//4단계 : timeline
+var timeline = require('./routes/timeline');
 //5단계 : 게시판
 var board = require('./routes/board');
 //패자부활전
@@ -25,6 +27,10 @@ app.use(express.static('public'));
 //bodyParser : post방식 body 사용
 app.use(bodyParser.urlencoded({extended:false}));
 
+//pug (jade)
+app.set('view engine', 'pug');
+app.set('views', './views');
+
 /**
  * app.get[post, etc...] (URL경로, 라우터의 콜백 메소드);
  * 해당 router 의 function으로 이동
@@ -35,7 +41,10 @@ app.get('/', main.welcome);
 //2단계 : 키워드 매칭
 app.get('/keyword', keyword.matchingGame);
 
-//4단계 : 게시판
+//4단계 : 타임라인
+app.get('/timeline', timeline.showTimeline);
+
+//5단계 : 게시판
 app.get('/board', board.showBoardList);
 
 //패자부활전 : 사다리게임
