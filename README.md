@@ -1,6 +1,10 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 424bf7db3d25317d32b6031ce9512085adf5c395
 # TeamPage
 DevStudy 팀소개 페이지
+
+## Node.js Local 환경 구성 방법
+<ol>
+  <li>cmd 실행</li>
+  <li>프로젝트 폴더로 이동</li>
+  <li>모듈설치 -> npm install</li>
+  <li>서버 실행 -> node app.js</li>
+</ol>
