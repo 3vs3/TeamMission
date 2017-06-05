@@ -16,6 +16,10 @@ var app = express();
 
 //appRoot Path 전역변수 지정
 global.appRoot = path.resolve(__dirname);
+// 선택한 캐릭터 전역변수
+// boyeon, daeun, jaejin, dongju
+global.character = 'daeun';
+global.duration = 100 * 60 + 200;
 
 /**
  * 정적 파일이란?
@@ -46,6 +50,7 @@ app.get('/timeline', timeline.showTimeline);
 
 //5단계 : 게시판
 app.get('/board', board.showBoardList);
+app.post('/board/add', board.addBoard);
 
 //패자부활전 : 사다리게임
 app.get('/ladder', ladder.startGame);

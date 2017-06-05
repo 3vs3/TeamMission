@@ -16,88 +16,28 @@ html
               .panel-body
                 .pull-right
                   .btn-group
-                    button.btn.btn-success.btn-filter(type='button', data-target='latest') 최신순
-                    button.btn.btn-warning.btn-filter(type='button', data-target='ranking') 랭킹순
+                    button.btn.btn-success.btn-filter(type='button' data-target='latest') 최신순
+                    button.btn.btn-warning.btn-filter(type='button' data-target='ranking') 랭킹순
                 .table-container
                   table.table.table-filter
                     tbody
-                      tr(data-status='ranking')
-                        td
-                          .media
-                            a.pull-left(href='#')
-                              img.media-photo(src='https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg')
-                            .media-body
-                              span.media-meta.pull-right Febrero 13, 2016
-                              h4.title
-                                | Lorem Impsum
-                                span.pull-right.pagado (Pagado)
-                              p.summary Ut enim ad minim veniam, quis nostrud exercitation...
-                      tr(data-status='latest')
-                        td
-                          .media
-                            a.pull-left(href='#')
-                              img.media-photo(src='https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg')
-                            .media-body
-                              span.media-meta.pull-right Febrero 13, 2016
-                              h4.title
-                                | Lorem Impsum
-                                span.pull-right.pendiente (Pendiente)
-                              p.summary Ut enim ad minim veniam, quis nostrud exercitation...
-                      tr(data-status='latest')
-                        td
-                          .media
-                            a.pull-left(href='#')
-                              img.media-photo(src='https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg')
-                            .media-body
-                              span.media-meta.pull-right Febrero 13, 2016
-                              h4.title
-                                | Lorem Impsum
-                                span.pull-right.cancelado (Cancelado)
-                              p.summary Ut enim ad minim veniam, quis nostrud exercitation...
-                      tr.selected(data-status='latest')
-                        td
-                          .media
-                            a.pull-left(href='#')
-                              img.media-photo(src='https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg')
-                            .media-body
-                              span.media-meta.pull-right Febrero 13, 2016
-                              h4.title
-                                | Lorem Impsum
-                                span.pull-right.pagado (Pagado)
-                              p.summary Ut enim ad minim veniam, quis nostrud exercitation...
-                      tr(data-status='ranking')
-                        td
-                          .media
-                            a.pull-left(href='#')
-                              img.media-photo(src='https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg')
-                            .media-body
-                              span.media-meta.pull-right Febrero 13, 2016
-                              h4.title
-                                | Lorem Impsum
-                                span.pull-right.pendiente (Pendiente)
-                              p.summary Ut enim ad minim veniam, quis nostrud exercitation...
-            .content-footer
-              p
-                | Page © - 2016 
-                br
-                |  Powered By
-                a(href='https://www.facebook.com/tavo.qiqe.lucero', target='_blank') TavoQiqe
+                      each temp in results
+                        tr(data-status=temp.character)
+                          td
+                            .media
+                              a.pull-left(href='#')
+                                img.media-photo(src='https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg')
+                              .media-body
+                                span.media-meta.pull-right=temp.reg_time
+                                h4.title
+                                  =temp.user_name
+                                  span.pull-right.pendiente=temp.duration
+                                p.summary=temp.comment
+                form.col-md-offset-2(action='/board/add' method='post')
+                  a.pull-left(href='#')
+                    img.media-photo(src='https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg')
+                  .media-body
+                    input.title(type='text' name='user_name' placeholder='이름을 입력해주세요.')
+                    input.summary(type='text' name='comment' placeholder='내용을 입력해주세요.')
+                    input.pull-right.btn.btn-success(type='submit')
     script(src='js/board.js')
-    script(type='text/javascript').
-      $(document).ready(function () {
-      $('.star').on('click', function () {
-      $(this).toggleClass('star-checked');
-      });
-      $('.ckbox label').on('click', function () {
-      $(this).parents('tr').toggleClass('selected');
-      });
-      $('.btn-filter').on('click', function () {
-      var $target = $(this).data('target');
-      if ($target != 'all') {
-      $('.table tr').css('display', 'none');
-      $('.table tr[data-status="' + $target + '"]').fadeIn('slow');
-      } else {
-      $('.table tr').css('display', 'none').fadeIn('slow');
-      }
-      });
-      });
