@@ -138,3 +138,8 @@ body {
 .table-filter .media .summary {
 	font-size: 14px;
 }
+
+.input_wrap{vertical-align:middle;}
+.input_wrap img{vertical-align:middle;}
+.input_wrap input{vertical-align:middle; height:50px; line-height:50px; border:1px solid #e2e2e2; text-indent:10px; border-radius:5px;}
+.input_wrap .confirm_btn{width:50px; background:none; border:1px solid #e2e2e2; text-indent:0px; background:#5ab759; border-radius:5px; color:#fff; font-weight:bold;}
