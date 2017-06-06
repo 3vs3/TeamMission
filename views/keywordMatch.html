@@ -7,18 +7,25 @@
     <link>
 </head>
 <body>
+<div>
+    <div class="title">키워드 매칭 게임</div>
+    <div class="summary">처음 약 10초간 각 팀원의 키워드를 랜덤으로 보여드릴게요.</div>
+    <div class="summary">키워드를 다 보셨죠? 이제 누구의 키워드인지 맞춰주세요. 해당하는 캐릭터를 클릭하시면 점수가 +1됩니다~! 5점 이상이면 통과입니다!</div>
+</div>
 <div id="divKeyword">
 
 </div>
 <div id="divKeywordGameStart">
-    <div class="title">키워드 매칭 게임</div>
-    <div class="summary">누구의 키워드인지 맞춰주세요. 해당하는 캐릭터를 클릭하시면 점수가 +1됩니다~! </div>
     <div id="divTxtKeyword"></div>
+    <div class="gameResult">
+        <p>맞춘 갯수 : <span id="matchCnt">0</span>/10</p>
+        <p>남은 게임 횟수 : <span id="remainCnt">10</span></p>
+    </div>
     <div id="divMemberImg">
-        <img id="boyeon" class="memberImg" src="images/보연.jpeg" />
+        <img id="boyeon" class="memberImg" style="max-width:220px;" src="images/보연.jpeg" />
         <img id="dongju" class="memberImg" src="images/동주.jpeg" />
         <img id="2da" class="memberImg" src="images/다은.jpeg" />
-        <img id="jaejin" class="memberImg" src="images/재진.png" />
+        <img id="jaejin" class="memberImg" style="max-width:220px;" src="images/재진.png" />
     </div>
 </div>
 <script type="text/javascript" src="js/gameKeywordMatch.js"></script>

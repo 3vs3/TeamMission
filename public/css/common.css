@@ -4,11 +4,18 @@
 }
 
 .title{
-    font-size: 30px;
+    font-size: 50px;
     margin-top: 40px;
+    color: #ffffff;
 }
 
 .summary{
-    font-size:15px;
+    font-size:16px;
     margin-top: 10px;
+    color: #cccccc;
+}
+
+body{
+    background-color: #1B1F22;
+    color:#fff;
 }

@@ -37,14 +37,20 @@ $(function(){
                 if(checkKeywordRight(keyword, memberName)){
                     // 맞으면
                     userScore.setScore(1);
-                }else{
-                    // 틀리면
-                };
+                }
 
                 gameCnt++;
+
+                // 게임 남은 횟수, 맞춘 횟수 출력
+                $('#matchCnt').text(userScore.getScore());
+                $('#remainCnt').text(10-gameCnt);
+
                 if(gameCnt > 9){
                     // 게임 10회
-                    finishGame(userScore.getScore());
+                    $('#remainCnt').text(0);
+                    setTimeout(function () {
+                        finishGame(userScore.getScore());
+                    },500);
                     return;
                 }else{
                     getGameTxt();
@@ -107,7 +113,7 @@ $(function(){
                         }else{
                             //console.log(x,y,tmpY,arrKeywordTeam[arrMemberNames[x]][tmpY-1]);
                             keyword = arrKeywordTeam[arrMemberNames[x]][tmpY-1];
-                            txtColor = 'black'
+                            txtColor = '#fff'
                         }
 
                         var node = '<p style="text-align: center; font-size:'+getRandomInt(30,100)+'px; margin: 0 auto; color:'+txtColor+'">'+keyword+'</p>';

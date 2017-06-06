@@ -24,7 +24,7 @@ $(function(){
         ladder.css({
             'width' :( widthNode-1) * 100 + 6,
             'height' : (heightNode -1 ) * 25 + 6,
-            'background-color' : '#fff'
+
         });
         ladder_canvas
             .attr('width' , ( widthNode-1) * 100 + 6)

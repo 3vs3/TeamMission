@@ -4,9 +4,26 @@
 body {
 	font-family: 'Open Sans', sans-serif;
 	color: #353535;
+	background-color: #1B1F22 !important;
 }
+
+form{
+	margin: 0 !important;
+}
+
+.media-body input{
+	margin-left: 10px;
+}
+.title{
+	width:140px
+}
+.summary {
+	width:310px
+}
+
 .content h1 {
 	text-align: center;
+	color: #ffffff;
 }
 .content .content-footer p {
 	color: #6d6d6d;
@@ -139,7 +156,13 @@ body {
 	font-size: 14px;
 }
 
-.input_wrap{vertical-align:middle;}
-.input_wrap img{vertical-align:middle;}
+.input_wrap{
+	vertical-align:middle;
+}
+.input_wrap img{
+	vertical-align:middle;
+	max-width: 50px;
+}
+
 .input_wrap input{vertical-align:middle; height:50px; line-height:50px; border:1px solid #e2e2e2; text-indent:10px; border-radius:5px;}
 .input_wrap .confirm_btn{width:50px; background:none; border:1px solid #e2e2e2; text-indent:0px; background:#5ab759; border-radius:5px; color:#fff; font-weight:bold;}
