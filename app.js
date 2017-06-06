@@ -20,6 +20,7 @@ var app = express();
 global.appRoot = path.resolve(__dirname);
 // 선택한 캐릭터 전역변수
 // boyeon, daeun, jaejin, dongju
+global.gMemberNameko = '';
 global.gMemberName = '';
 global.gInterval = 0;
 global.gTens = 0;
@@ -27,6 +28,18 @@ global.gStartTimer = function () {
   gTens++;
 }
 global.gStep = 1;
+
+global.gmember = function() {
+  if ( gMemberName == "boyeon"){
+    gMemberNameko = '보연';
+  }else if( gMemberName == "dongju"){
+    gMemberNameko = '동주';
+  }else if( gMemberName == "daeun"){
+    gMemberNameko = '다은';
+  }else if( gMemberName == "jaejin"){
+    gMemberNameko = '재진';
+  }
+}
 
 
 app.locals.pretty = true ;  //페이지 소스보기 이쁘게
