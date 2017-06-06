@@ -11,6 +11,10 @@ body(style='background-color: #1B1F22 !important;')
     .container
       .page-header
         h1.title 프로젝트 TimeLine
+      .row
+        .pull-right(style='margin-right: 20px')
+          button.btn.btn-default.btn-lg(type='button' id='btn_complete')
+            span.glyphicon.glyphicon-ok(aria-hidden='true') 완료
       #timeline
         .row.timeline-movement.timeline-movement-top
           .timeline-badge.timeline-future-movement
@@ -115,4 +119,5 @@ body(style='background-color: #1B1F22 !important;')
                       p
                         small.text-muted
                           i.glyphicon.glyphicon-time 13/05/2017
+    script(src='js/timeline.js')
     include footer
