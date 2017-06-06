@@ -72,11 +72,12 @@ $(function(){
         if(score > 4){
             alert(score + '점을 획득하셨군요 통과입니다');
             // 스탬프 증가 함수 콜
+            location.href="/cardgame" ;
         }else{
             alert(score + '점으로 아쉽게 스탬프 획득을 실패하였습니다');
         }
     }
-    
+
     // 키워드 체크
     function checkKeywordRight(keword, memberName){
         for(var idx in arrKeywordTeam[memberName]){

@@ -20,7 +20,7 @@ var app = express();
 global.appRoot = path.resolve(__dirname);
 // 선택한 캐릭터 전역변수
 // boyeon, daeun, jaejin, dongju
-global.gMemberName = 'boyeon';
+global.gMemberName = '';
 global.gSeconds = 100 * 60 + 200;
 global.gStep = 1;
 

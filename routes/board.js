@@ -22,7 +22,7 @@ exports.showBoardList = function(req, res) {
   c.query(sql, function(err, results) {
     if(err)
       showError(err, res);
-    res.render('board', {results:results});
+    res.render('board', {results:results, gMemberName:gMemberName});
   });
 
   c.end();
