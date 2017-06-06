@@ -1,7 +1,5 @@
 var path = require("path");
-var querystring = require('querystring');
 var Client = require('mariasql');
-var url = require('url');
 var db_config = require('../config/db-config.json');
 
 var c = new Client({
@@ -13,9 +11,12 @@ var c = new Client({
 });
 
 exports.showBoardList = function(req, res) {
+  if(!gIsClearPrevStep()) {
+    res.redirect('/');
+  }
+
   clearInterval(gInterval);
 
-  var uri = url.parse(req.url);
   var pageNum = req.query.pageNum;
   var order = req.query.order;
 

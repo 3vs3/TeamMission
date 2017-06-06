@@ -40,7 +40,7 @@ html
                             div.btn-group(role='group')
                               - for(var i = 1; i < totalPageNum + 1; i++)
                                   button.btn.btn-default.btn-paging=i
-                form.col-md-offset-2(action='/board/add' method='post')
+                form.col-md-offset-2(name='add-comment' action='/board/add' method='post' onsubmit='return validateForm()')
                   .input_wrap
                     img.pull-left.media-photo(src='/images/' + gMemberName )
                     .media-body

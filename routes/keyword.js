@@ -2,7 +2,12 @@ var path    = require("path");
 
 exports.matchingGame = function(req, res) {
   gMemberName = req.query.char;
+  if(!gIsClearPrevStep()) {
+    res.redirect('/');
+  }
+
   gStep = 2;
+
   clearInterval(gInterval);
   gInterval = setInterval(gStartTimer, 10);
   global.gMemberNameKor = changeNameEngToNameKor(gMemberName);

@@ -23,10 +23,18 @@ global.appRoot = path.resolve(__dirname);
 global.gMemberName = '';
 global.gInterval = 0;
 global.gTens = 0;
+global.gStep = 0;
 global.gStartTimer = function () {
   gTens++;
 }
-global.gStep = 0;
+global.gIsClearPrevStep = function() {
+
+  if(gMemberName === '') {
+    return false;
+  }
+
+  return true;
+}
 
 
 app.locals.pretty = true ;  //페이지 소스보기 이쁘게
