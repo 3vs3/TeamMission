@@ -1,0 +1,118 @@
+doctype html
+html
+head
+    meta(charset='utf-8')
+    title TimeLine
+    link(rel='stylesheet', href='css/timeline.css')
+    link(rel='stylesheet', href='css/common.css')
+    link#bootstrap-css(href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css', rel='stylesheet')
+    script(src='//code.jquery.com/jquery-1.10.2.min.js')
+body(style='background-color: #1B1F22 !important;')
+    .container
+      .page-header
+        h1.title 프로젝트 TimeLine
+      #timeline
+        .row.timeline-movement.timeline-movement-top
+          .timeline-badge.timeline-future-movement
+            a(href='#')
+              span.glyphicon.glyphicon-plus
+          .timeline-badge.timeline-filter-movement
+            a(href='#')
+              span.glyphicon.glyphicon-time
+        .row.timeline-movement
+          .timeline-badge
+            span.timeline-balloon-date-day 04
+            span.timeline-balloon-date-month JUN
+
+          .col-sm-6.timeline-item
+            .row
+              .col-sm-11
+                .timeline-panel.credits
+                  ul.timeline-panel-ul
+                    li
+                      span.importo 끝을 향하다.
+                    li
+                      span.causale 프로젝트 마감의 끝을 향해 <br> 3vs3 화이팅!!
+                    li
+                      p
+                        small.text-muted
+                          i.glyphicon.glyphicon-time 11/09/2014
+
+          .col-sm-6.timeline-item
+            .row
+              .col-sm-offset-1.col-sm-11
+                .timeline-panel.debits
+                  ul.timeline-panel-ul
+                    li
+                      span.importo 9th, Jun
+                    li
+                      span.causale 프로젝트 DeadLine...
+                    li
+                      p
+                        small.text-muted
+                          i.glyphicon.glyphicon-time 11/09/2014
+        // due
+        .row.timeline-movement
+          .timeline-badge
+            span.timeline-balloon-date-day 19
+            span.timeline-balloon-date-month MAY
+          .col-sm-offset-6.col-sm-6.timeline-item
+            .row
+              .col-sm-offset-1.col-sm-11
+                .timeline-panel.debits
+                  ul.timeline-panel-ul
+                    li
+                      span.importo Self Study
+                    li
+                      span.causale 팀미션을 향한, 또한 개인미션을 향한<br>개인 스터디 Start!!
+                    li
+                      p
+                        small.text-muted
+                          i.glyphicon.glyphicon-time 19/05/2017
+
+          .col-sm-6.timeline-item
+            .row
+              .col-sm-11
+                .timeline-panel.credits
+                  ul.timeline-panel-ul
+                    li
+                      span.importo 3vs3은 Fun!!
+                    li
+                      span.causale 두번째 만남<br>기획의 방향은 Fun And Fun And FUN!!
+                    li
+                      p
+                        small.text-muted
+                          i.glyphicon.glyphicon-time 19/05/2017
+
+        .row.timeline-movement
+          .timeline-badge
+            span.timeline-balloon-date-day 12
+            span.timeline-balloon-date-month MAY
+          .col-sm-offset-6.col-sm-6.timeline-item
+            .row
+              .col-sm-offset-1.col-sm-11
+                .timeline-panel.debits
+                  ul.timeline-panel-ul
+                    li
+                      span.importo 3v3 Team Mission
+                    li
+                      span.causale DevStudy 팀 미션 <br> 우리에게 주어진 미션. <br> 팀소개 페이지를 만들어라!!
+                    li
+                      p
+                        small.text-muted
+                          i.glyphicon.glyphicon-time 13/05/2017
+
+          .col-sm-6.timeline-item
+            .row
+              .col-sm-11
+                .timeline-panel.credits
+                  ul.timeline-panel-ul
+                    li
+                      span.importo 3vs3 만나다
+                    li
+                      span.causale DevStudy의 시작,<br>그리고 3vs3 팀원들과의 첫 만남.
+                    li
+                      p
+                        small.text-muted
+                          i.glyphicon.glyphicon-time 13/05/2017
+    include footer
