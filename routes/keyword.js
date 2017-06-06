@@ -5,5 +5,27 @@ exports.matchingGame = function(req, res) {
   gStep = 2;
   clearInterval(gInterval);
   gInterval = setInterval(gStartTimer, 10);
-  res.sendFile(path.join(appRoot + '/views/keywordMatch.html'));
+  global.gMemberNameKor = changeNameEngToNameKor(gMemberName);
+  global.gMemberName = gMemberName +'-mini.jpg';
+  res.render('keywordMatch', {membername:gMemberName, gStep:gStep});
 };
+
+function changeNameEngToNameKor(EngName) {
+    var name = '보연';
+    switch (EngName){
+        case 'boyeon':
+            break;
+        case 'dongju':
+            name = '동주';
+            break;
+        case 'daeun':
+            name = '다은';
+            break;
+        case 'jaejin':
+            name = '재진';
+            break;
+        default:
+            break;
+    }
+    return name;
+}

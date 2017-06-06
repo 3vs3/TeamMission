@@ -26,7 +26,7 @@ $(function(){
         var gameCnt = 0;
 
         function getGameTxt(){
-
+            $('#divMemberImg').show();
             var keyword = arrKeywordTeam[arrMemberNames[getRandomInt(0,3)]][getRandomInt(0,9)];
             var node = '<p style="text-align: center; font-size:'+getRandomInt(50,100)+'px; margin: 0 auto; ">'+keyword+'</p>';
             $('#divTxtKeyword').html('').append(node);
@@ -67,7 +67,6 @@ $(function(){
                 },
                 setScore: function(num) {
                     score += num;
-                    //console.log('score :' + score);
                 }
             }
         }
@@ -78,18 +77,27 @@ $(function(){
         if(score > 4){
             alert(score + '점을 획득하셨군요 통과입니다');
             // 스탬프 증가 함수 콜
-            location.href="/cardgame" ;
+            location.href="/cardgame";
         }else{
             alert(score + '점으로 아쉽게 스탬프 획득을 실패하였습니다');
-            location.href="/ladder" ;
+
+            location.href="/ladder?char=" +getUrlVars('char').char;
         }
+    }
+
+    function getUrlVars() {
+        var vars = {};
+        var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi,
+            function(m,key,value) {
+                vars[key] = value;
+            });
+        return vars;
     }
 
     // 키워드 체크
     function checkKeywordRight(keword, memberName){
         for(var idx in arrKeywordTeam[memberName]){
             if(keword == arrKeywordTeam[memberName][idx] ){
-                //console.log(arrKeywordTeam[memberName][idx]);
                 return true;
             }
         }
@@ -107,11 +115,9 @@ $(function(){
                         var keyword = '';
                         var arrTxtColor = ['yellow', 'green','pink','blue'];
                         if(y==0){
-                            //console.log(changeEngNameToKorName(arrMemberNames[x]));
                             keyword = changeEngNameToKorName(arrMemberNames[x]);
                             txtColor = arrTxtColor[getRandomInt(0,3)];
                         }else{
-                            //console.log(x,y,tmpY,arrKeywordTeam[arrMemberNames[x]][tmpY-1]);
                             keyword = arrKeywordTeam[arrMemberNames[x]][tmpY-1];
                             txtColor = '#fff'
                         }
@@ -124,9 +130,9 @@ $(function(){
                                 $('#divKeyword').html('');
                                 $('#divKeywordGameStart').show();
                                 gameKeywordMatch();
-                            },200);
+                            },300);
                         }
-                    }, 2200*(x)+200*(y));
+                    }, 3300*(x)+300*(y));
                 })(i,j);
             }
         }
@@ -157,4 +163,6 @@ $(function(){
      function getRandomInt(min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
+
+
 });

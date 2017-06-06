@@ -370,41 +370,40 @@ $(function(){
     // 선택된 멤버 알림
     function alertNewMemberMessege(newMemName){
 
-        // 이전 멤버 > 이후 쿠키 또는 전역 변수에서 가져오기
-        var originMemName = '최보연';
-        if(newMemName == originMemName){
+        var newMemNameEng = setKorNameToEngName(newMemName);
+        var originMemName = getUrlVars('char').char;
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi,
+                function(m,key,value) {
+                    vars[key] = value;
+                });
+            return vars;
+        }
+
+        if(newMemNameEng == originMemName){
             alert('또 다시 ' + newMemName + '님이 선택되셨군요. 천생연분이니, ' +
                 '어쩔 수 없이 ' + newMemName + '님과 게임을 다시 시작해봅시다! 출바알~');
         }else{
             alert('새로운 팀 멤버 ' + newMemName + '님과 다음 단계로 진행해봅시다. 출바알~');
         }
-        setNewMember(newMemName);
-        if(newMemName == '최보연') {
-          newMemName = 'boyeon';
-        } else if(newMemName == '이다은') {
-          newMemName = 'daeun';
-        } else if(newMemName == '이동주') {
-          newMemName = 'dongju';
-        } else {
-          newMemName = 'jaejin';
-        }
-        location.href="/keyword?char=" + newMemName ;
+
+        location.href="/keyword?char=" + newMemNameEng ;
     }
 
-    // 선택된 멤버 재설정
-    function setNewMember (newMemName) {
-        if(newMemName == '최보연') {
-          newMemName = 'boyeon';
-        } else if(newMemName == '이다은') {
-          newMemName = 'daeun';
-        } else if(newMemName == '이동주') {
-          newMemName = 'dongju';
+    // 영어 이름 변환
+    function setKorNameToEngName (name) {
+        if (name == '최보연') {
+            name = 'boyeon';
+        } else if (name == '이다은') {
+            name = 'daeun';
+        } else if (name == '이동주') {
+            name = 'dongju';
         } else {
-          newMemName = 'jaejin';
+            name = 'jaejin';
         }
-        //this.newMemName = newMemName;
-        console.log(newMemName);
-        //$('#divGameLadder').hide();
+        return name;
     }
 
 
