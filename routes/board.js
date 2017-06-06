@@ -48,9 +48,6 @@ exports.addBoard = function(req, res) {
 function calculateTime(tens) {
   var tempTens = tens % 100;
   var second = parseInt(tens / 100);
-  //var min = parseInt(second / 60);
-  //var hour = parseInt(min / 60);
-
   return second;
 }
 

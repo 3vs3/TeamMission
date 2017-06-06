@@ -4,8 +4,6 @@
 
 $(function(){
 
-    //console.log(getQueryParams('char').char) ;
-    //setNPC();
     var arrKeywordBoyeon = ["CGV 5년간 VIP", "오늘도 나는 배가 고프다", "볼링", "인도", "배낭여행", "택시타는 것을 매우 싫어함", "몽니 (인디밴드)","자비에돌란", "갓헬프더걸", "죽음의 수용소"];
     var arrKeyword2da = ["안드로이드", "픽시", "서핑", "익스트림", "음악", "중국", "새로운 것", "재밌게 살자", "나는 아직 더 까매질수있다(?)", "아마추어 경륜대회"];
     var arrKeywordDongju = ["비전공자", "비개발자", "법학도", "우주비행사", "크리스토퍼 놀란", "만화책", "아이돌", "덕후는아니라능", "디지털노마드", "미니멀리스트"];
@@ -82,8 +80,18 @@ $(function(){
             location.href="/cardgame";
         }else{
             alert(score + '점으로 아쉽게 스탬프 획득을 실패하였습니다');
-            location.href="/ladder";
+
+            location.href="/ladder?char=" +getUrlVars('char').char;
         }
+    }
+
+    function getUrlVars() {
+        var vars = {};
+        var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi,
+            function(m,key,value) {
+                vars[key] = value;
+            });
+        return vars;
     }
 
     // 키워드 체크
