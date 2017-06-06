@@ -113,7 +113,7 @@ $(function(){
                         }else{
                             //console.log(x,y,tmpY,arrKeywordTeam[arrMemberNames[x]][tmpY-1]);
                             keyword = arrKeywordTeam[arrMemberNames[x]][tmpY-1];
-                            txtColor = 'black'
+                            txtColor = '#fff'
                         }
 
                         var node = '<p style="text-align: center; font-size:'+getRandomInt(30,100)+'px; margin: 0 auto; color:'+txtColor+'">'+keyword+'</p>';
@@ -124,9 +124,9 @@ $(function(){
                                 $('#divKeyword').html('');
                                 $('#divKeywordGameStart').show();
                                 gameKeywordMatch();
-                            },2);
+                            },200);
                         }
-                    }, 22*(x)+2*(y));
+                    }, 2200*(x)+200*(y));
                 })(i,j);
             }
         }
