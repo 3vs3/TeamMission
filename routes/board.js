@@ -74,7 +74,7 @@ exports.showBoardList = function(req, res) {
 exports.addBoard = function(req, res) {
   var user_name = req.body.user_name;
   var comment = req.body.comment;
-  var character = global.gMemberName;
+  var character = global.gMemberName2;
   var duration = calculateTime(gTens);
 
   var params = [user_name, comment, character, duration];

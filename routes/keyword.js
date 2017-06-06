@@ -11,7 +11,8 @@ exports.matchingGame = function(req, res) {
   clearInterval(gInterval);
   gInterval = setInterval(gStartTimer, 10);
   global.gMemberNameKor = changeNameEngToNameKor(gMemberName);
-  global.gMemberName = gMemberName +'-mini.jpg';
+  global.gMemberName = gMemberName + '-mini.jpg';
+  gMemberName2 = req.query.char;
   res.render('keywordMatch', {membername:gMemberName, gStep:gStep});
 };
 

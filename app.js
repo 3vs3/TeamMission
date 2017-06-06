@@ -21,6 +21,7 @@ global.appRoot = path.resolve(__dirname);
 // 선택한 캐릭터 전역변수
 // boyeon, daeun, jaejin, dongju
 global.gMemberName = '';
+global.gMemberName2 = '';//DB저장용 컬럼
 global.gInterval = 0;
 global.gTens = 0;
 global.gStep = 0;
