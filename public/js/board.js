@@ -10,14 +10,31 @@ $(document).ready(function() {
 
   $('.btn-filter').on('click', function() {
     var $target = $(this).data('target');
-    // if ($target != 'all') {
-    //   $('.table tr').css('display', 'none');
-    //   $('.table tr[data-status="' + $target + '"]').fadeIn('slow');
-    // } else {
-    //   $('.table tr').css('display', 'none').fadeIn('slow');
-    // }
-    //console.log('target : ' + $target);
-		$(location).attr('href', '?order=' + $target);
+    $(location).attr('href', '?order=' + $target);
+
+    //$temp = $.url().param('order');
+    //$(location).attr('href', qs);
+  });
+
+  $('.btn-paging').on('click', function() {
+    //alert('def');
+    var $pageNum = $(this).text();
+
+    $(location).attr('href', '?pageNum=' + $pageNum);
   });
 
 });
+
+// Read a page's GET URL variables and return them as an associative array.
+function getUrlVars()
+{
+    var vars = [], hash;
+    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+    for(var i = 0; i < hashes.length; i++)
+    {
+        hash = hashes[i].split('=');
+        vars.push(hash[0]);
+        vars[hash[0]] = hash[1];
+    }
+    return vars;
+}

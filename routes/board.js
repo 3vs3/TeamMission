@@ -1,6 +1,7 @@
 var path = require("path");
 var querystring = require('querystring');
 var Client = require('mariasql');
+var url = require('url');
 var db_config = require('../config/db-config.json');
 
 var c = new Client({
@@ -14,20 +15,55 @@ var c = new Client({
 exports.showBoardList = function(req, res) {
   clearInterval(gInterval);
 
+  var uri = url.parse(req.url);
+  var pageNum = req.query.pageNum;
   var order = req.query.order;
-  var sql = 'SELECT * FROM board order by';
-  if(order === 'ranking') {
-    sql += ' duration asc';
-  } else {
-    sql += ' reg_time desc';
-  }
-  c.query(sql, function(err, results) {
+
+  var totalCount = 0;
+  var totalPageNum = 1;
+
+  var countSql = 'SELECT count(*) as count FROM board';
+  c.query(countSql, function(err, results) {
     if(err)
       showError(err, res);
-    res.render('board', {results:results, gMemberName:gMemberName});
+
+    totalCount = results[0].count;
+    totalPageNum = parseInt(totalCount / 10);
+    if(totalCount % 10 !== 0) {
+      console.log('aa');
+      totalPageNum += 1;
+    }
+    //console.dir(results);
+    console.log('totalCount : ' + totalCount);
+
+    var offset = 0;
+    if(pageNum === undefined) {
+      offset = 0;
+    } else if(pageNum > 0) {
+      //10개씩 불러옴
+      offset = (pageNum - 1) * 10;
+    }
+
+    console.log('offset : ' + offset);
+
+    var sql = 'SELECT * FROM board order by';
+    if(order === 'ranking') {
+      sql += ' duration asc';
+    } else {
+      sql += ' reg_time desc';
+    }
+    //pageNum 부터 10개 row
+    sql += ' limit ' + offset + ', 10';
+
+    c.query(sql, function(err2, results2) {
+      if(err2)
+        showError(err2, res);
+      res.render('board', {results:results2, gMemberName:gMemberName, totalPageNum:totalPageNum});
+    });
+
+    c.end();
   });
 
-  c.end();
 };
 
 exports.addBoard = function(req, res) {
@@ -48,8 +84,6 @@ exports.addBoard = function(req, res) {
 function calculateTime(tens) {
   var tempTens = tens % 100;
   var second = parseInt(tens / 100);
-  //var min = parseInt(second / 60);
-  //var hour = parseInt(min / 60);
 
   return second;
 }

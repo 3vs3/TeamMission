@@ -33,9 +33,16 @@ html
                                   =temp.user_name
                                   span.pull-right.pendiente=temp.duration
                                 p.summary=temp.comment
+                    tfoot
+                      tr
+                        td
+                          div.btn-toolbar.pull-right(role='toolbar')
+                            div.btn-group(role='group')
+                              - for(var i = 1; i < totalPageNum + 1; i++)
+                                  button.btn.btn-default.btn_pagin=i
                 form.col-md-offset-2(action='/board/add' method='post')
                   .input_wrap
-                    img.pull-left.media-photo(src='/images/' + gMemberName + '-mini.jpg')
+                    img.pull-left.media-photo(src='/images/' + gMemberName )
                     .media-body
                       input.title(type='text' name='user_name' placeholder='이름을 입력해주세요.')
                       input.summary(type='text' name='comment' placeholder='내용을 입력해주세요.')
