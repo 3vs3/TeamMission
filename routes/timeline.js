@@ -1,8 +1,6 @@
 var path    = require("path");
 
 exports.showTimeline = function(req, res) {
-  //res.send('This is board');
+  gStep = 4
   res.sendFile(path.join(appRoot + '/views/timeline.html'));
-  gStep = 4;
-  console.log('gStep : ' + gStep);
 };

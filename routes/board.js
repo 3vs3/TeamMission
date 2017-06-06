@@ -13,7 +13,6 @@ var c = new Client({
 
 exports.showBoardList = function(req, res) {
   clearInterval(gInterval);
-  gStep = 4;
 
   var order = req.query.order;
   var sql = 'SELECT * FROM board order by';
