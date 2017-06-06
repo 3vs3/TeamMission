@@ -6,6 +6,8 @@ var bodyParser = require("body-parser");
 var main = require('./routes/main');
 //2단계 : keyword
 var keyword = require('./routes/keyword');
+//3단계 : cardgame
+var cardGame = require('./routes/cardgame');
 //4단계 : timeline
 var timeline = require('./routes/timeline');
 //5단계 : 게시판
@@ -18,8 +20,9 @@ var app = express();
 global.appRoot = path.resolve(__dirname);
 // 선택한 캐릭터 전역변수
 // boyeon, daeun, jaejin, dongju
-global.character = 'daeun';
-global.duration = 100 * 60 + 200;
+global.gMemberName = 'boyeon';
+global.gSeconds = 100 * 60 + 200;
+global.gStep = 1;
 
 /**
  * 정적 파일이란?
@@ -44,6 +47,9 @@ app.get('/', main.welcome);
 
 //2단계 : 키워드 매칭
 app.get('/keyword', keyword.matchingGame);
+
+//3단계 : 카드게임
+app.get('/cardgame', cardGame.startGame);
 
 //4단계 : 타임라인
 app.get('/timeline', timeline.showTimeline);

@@ -6,7 +6,7 @@ CREATE TABLE `board` (
 	`selected_character` VARCHAR(20) NOT NULL COMMENT 'boyeon: 보연, daeun : 다은, jeajin: 재진, dongju : 동주',
 	`comment` VARCHAR(100) NULL DEFAULT '' COMMENT '댓글내용',
 	`duration` TIME NOT NULL DEFAULT '00:00:00' COMMENT '게임진행시간',
-	`reg_time` DATETIME NOT NULL DEFAULT '',
+	`reg_time` DATETIME NOT NULL,
 	PRIMARY KEY (`_id`),
 	INDEX `_id` (`_id`)
 )

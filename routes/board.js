@@ -31,8 +31,8 @@ exports.showBoardList = function(req, res) {
 exports.addBoard = function(req, res) {
   var user_name = req.body.user_name;
   var comment = req.body.comment;
-  var character = global.character;
-  var duration = global.duration;
+  var character = global.gMemberName;
+  var duration = global.gSeconds;
   var params = [user_name, comment, character, duration];
   c.query('INSERT INTO board (user_name, comment, selected_character, duration) VALUES (?, ?, ?, ?)', params, function(err, result) {
     if(err)
