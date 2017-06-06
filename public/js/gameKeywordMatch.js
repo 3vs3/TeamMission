@@ -4,7 +4,7 @@
 
 $(function(){
 
-    console.log(getQueryParams('char').char) ;
+    //console.log(getQueryParams('char').char) ;
     //setNPC();
     var arrKeywordBoyeon = ["CGV 5년간 VIP", "오늘도 나는 배가 고프다", "볼링", "인도", "배낭여행", "택시타는 것을 매우 싫어함", "몽니 (인디밴드)","자비에돌란", "갓헬프더걸", "죽음의 수용소"];
     var arrKeyword2da = ["안드로이드", "픽시", "서핑", "익스트림", "음악", "중국", "새로운 것", "재밌게 살자", "나는 아직 더 까매질수있다(?)", "아마추어 경륜대회"];
@@ -28,7 +28,7 @@ $(function(){
         var gameCnt = 0;
 
         function getGameTxt(){
-
+            $('#divMemberImg').show();
             var keyword = arrKeywordTeam[arrMemberNames[getRandomInt(0,3)]][getRandomInt(0,9)];
             var node = '<p style="text-align: center; font-size:'+getRandomInt(50,100)+'px; margin: 0 auto; ">'+keyword+'</p>';
             $('#divTxtKeyword').html('').append(node);
@@ -79,10 +79,10 @@ $(function(){
         if(score > 4){
             alert(score + '점을 획득하셨군요 통과입니다');
             // 스탬프 증가 함수 콜
-            location.href="/cardgame?char="  + getQueryParams('char').char;
+            location.href="/cardgame";
         }else{
             alert(score + '점으로 아쉽게 스탬프 획득을 실패하였습니다');
-            location.href="/ladder?char=" +getQueryParams('char').char;
+            location.href="/ladder";
         }
     }
 

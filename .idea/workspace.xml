@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21a2f95d-abfe-4e53-abf0-bf79be2105be" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/stamp.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/NPC.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/npc.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/gameKeywordMatch.css" afterPath="$PROJECT_DIR$/public/css/gameKeywordMatch.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/gameKeywordMatch.js" afterPath="$PROJECT_DIR$/public/js/gameKeywordMatch.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/cardgame.html" afterPath="$PROJECT_DIR$/views/cardgame.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/keywordMatch.html" afterPath="$PROJECT_DIR$/views/keywordMatch.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/footer.pug" afterPath="$PROJECT_DIR$/views/footer.pug" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/keywordMatch.pug" afterPath="$PROJECT_DIR$/views/keywordMatch.pug" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -24,11 +21,94 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="gameKeywordMatch.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/gameKeywordMatch.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <folding>
+                <marker date="1496759184000" expanded="true" signature="1271:1345" ph="..." />
+                <marker date="1496759184000" expanded="true" signature="3888:3968" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gameKeywordMatch.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/css/gameKeywordMatch.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="20" column="18" lean-forward="false" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="board.pug" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/board.pug">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="588">
+              <caret line="37" column="74" lean-forward="false" selection-start-line="37" selection-start-column="63" selection-end-line="37" selection-end-column="74" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cardgame.pug" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/cardgame.pug">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="481">
+              <caret line="259" column="0" lean-forward="true" selection-start-line="259" selection-start-column="0" selection-end-line="259" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="footer.pug" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/footer.pug">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="160">
+              <caret line="8" column="2" lean-forward="false" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="timeline.pug" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/timeline.pug">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="keywordMatch.pug" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/keywordMatch.pug">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="520">
+              <caret line="26" column="49" lean-forward="false" selection-start-line="26" selection-start-column="49" selection-end-line="26" selection-end-column="49" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="npc.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/js/npc.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="2" lean-forward="true" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="35" />
+            <state relative-caret-position="326">
+              <caret line="21" column="26" lean-forward="true" selection-start-line="11" selection-start-column="20" selection-end-line="21" selection-end-column="26" />
               <folding>
                 <element signature="n#!!doc;n#setNPC#0" expanded="false" />
                 <marker date="1496755633000" expanded="true" signature="318:371" ph="..." />
@@ -53,97 +133,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="keyword.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/keyword.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="6" column="60" lean-forward="false" selection-start-line="6" selection-start-column="60" selection-end-line="6" selection-end-column="60" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cardgame.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/cardgame.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="board.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/board.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="35" column="33" lean-forward="false" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="33" />
-              <folding>
-                <marker date="1496743037000" expanded="true" signature="353:383" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cardgame.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/cardgame.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="434">
-              <caret line="136" column="4" lean-forward="false" selection-start-line="136" selection-start-column="4" selection-end-line="136" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/views/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="481">
-              <caret line="259" column="0" lean-forward="true" selection-start-line="259" selection-start-column="0" selection-end-line="259" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="keywordMatch.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/keywordMatch.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="37" />
-              <folding>
-                <element signature="n#style#0;n#img#0;n#div#2;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#3;n#div#2;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="140">
               <caret line="7" column="11" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ladder.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/ladder.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="3" column="54" lean-forward="false" selection-start-line="3" selection-start-column="54" selection-end-line="3" selection-end-column="54" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="3" column="20" lean-forward="false" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="20" />
-              <folding />
+              <folding>
+                <marker date="1496758731000" expanded="true" signature="734:840" ph="/** 정적 파일이란? ...*/" />
+                <marker date="1496758731000" expanded="true" signature="1079:1162" ph="/** app.get[post, etc...] (URL경로, 라우터의 콜백 메소드); ...*/" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -161,8 +159,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>#ddd</find>
-      <find>widthNode</find>
       <find>background</find>
       <find>laddr</find>
       <find>charimage</find>
@@ -191,6 +187,8 @@
       <find>key</find>
       <find>keyword</find>
       <find>lae</find>
+      <find>finishGame</find>
+      <find>divMemberImg</find>
     </findStrings>
     <replaceStrings>
       <replace>blue</replace>
@@ -226,7 +224,6 @@
         <option value="$PROJECT_DIR$/views/timeline.html" />
         <option value="$PROJECT_DIR$/views/board.pug" />
         <option value="$PROJECT_DIR$/public/css/board.css" />
-        <option value="$PROJECT_DIR$/public/css/gameKeywordMatch.css" />
         <option value="$PROJECT_DIR$/public/js/gameLadder.js" />
         <option value="$PROJECT_DIR$/views/ladder.html" />
         <option value="$PROJECT_DIR$/app.js" />
@@ -237,10 +234,13 @@
         <option value="$PROJECT_DIR$/public/js/npc.js" />
         <option value="$PROJECT_DIR$/public/css/NPC.css" />
         <option value="$PROJECT_DIR$/routes/keyword.js" />
-        <option value="$PROJECT_DIR$/public/js/gameKeywordMatch.js" />
         <option value="$PROJECT_DIR$/views/cardgame.html" />
         <option value="$PROJECT_DIR$/routes/ladder.js" />
         <option value="$PROJECT_DIR$/views/index.html" />
+        <option value="$PROJECT_DIR$/public/js/gameKeywordMatch.js" />
+        <option value="$PROJECT_DIR$/public/css/gameKeywordMatch.css" />
+        <option value="$PROJECT_DIR$/views/keywordMatch.pug" />
+        <option value="$PROJECT_DIR$/views/footer.pug" />
       </list>
     </option>
   </component>
@@ -542,12 +542,12 @@
       <option name="presentableId" value="Default" />
       <updated>1496491915742</updated>
       <workItem from="1496491916994" duration="45172000" />
-      <workItem from="1496749305247" duration="7739000" />
+      <workItem from="1496749305247" duration="8474000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52911000" />
+    <option name="totallyTimeSpent" value="53646000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -600,10 +600,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/assets/css/noscript.css" />
-    <entry file="file://$PROJECT_DIR$/assets/css/meterial.css" />
-    <entry file="file://$PROJECT_DIR$/assets/css/style.css" />
-    <entry file="file://$PROJECT_DIR$/assets/js/common.js" />
     <entry file="file://$PROJECT_DIR$/assets/js/ladder.js" />
     <entry file="file://$PROJECT_DIR$/assets/css/common.css" />
     <entry file="file://$PROJECT_DIR$/assets/css/gameLadder.css" />
@@ -712,14 +708,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/gameKeywordMatch.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="19" column="21" lean-forward="true" selection-start-line="18" selection-start-column="4" selection-end-line="19" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/gameLadder.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="658">
@@ -737,14 +725,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="11" column="30" lean-forward="false" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/board.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="37" column="74" lean-forward="false" selection-start-line="37" selection-start-column="63" selection-end-line="37" selection-end-column="74" />
           <folding />
         </state>
       </provider>
@@ -799,44 +779,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/gameKeywordMatch.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="81" column="34" lean-forward="false" selection-start-line="81" selection-start-column="34" selection-end-line="81" selection-end-column="34" />
-          <folding>
-            <marker date="1496756414000" expanded="true" signature="1231:1305" ph="..." />
-            <marker date="1496756414000" expanded="true" signature="3920:4000" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/npc.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="2" lean-forward="true" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="35" />
-          <folding>
-            <element signature="n#!!doc;n#setNPC#0" expanded="false" />
-            <marker date="1496755633000" expanded="true" signature="318:371" ph="..." />
-            <marker date="1496755633000" expanded="true" signature="318:372" ph="..." />
-            <marker date="1496755633000" expanded="true" signature="318:373" ph="..." />
-            <marker date="1496755633000" expanded="true" signature="318:375" ph="..." />
-            <marker date="1496755633000" expanded="true" signature="318:414" ph="..." />
-            <marker date="1496755633000" expanded="true" signature="318:444" ph="..." />
-            <marker date="1496755633000" expanded="true" signature="318:492" ph="..." />
-            <marker date="1496755633000" expanded="true" signature="318:588" ph="..." />
-            <marker date="1496755633000" expanded="true" signature="318:590" ph="..." />
-            <marker date="1496755633000" expanded="true" signature="318:622" ph="..." />
-            <marker date="1496755633000" expanded="true" signature="318:669" ph="..." />
-            <marker date="1496755633000" expanded="true" signature="318:670" ph="..." />
-            <marker date="1496755633000" expanded="true" signature="318:683" ph="..." />
-            <marker date="1496755633000" expanded="true" signature="318:787" ph="..." />
-            <marker date="1496755633000" expanded="true" signature="493:569" ph="..." />
-            <marker date="1496755633000" expanded="true" signature="493:588" ph="..." />
-            <marker date="1496755633000" expanded="true" signature="670:683" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/NPCtest.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
@@ -882,7 +824,7 @@
     <entry file="file://$PROJECT_DIR$/routes/keyword.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="6" column="60" lean-forward="false" selection-start-line="6" selection-start-column="60" selection-end-line="6" selection-end-column="60" />
+          <caret line="11" column="62" lean-forward="false" selection-start-line="11" selection-start-column="62" selection-end-line="11" selection-end-column="62" />
           <folding />
         </state>
       </provider>
@@ -910,7 +852,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
           <caret line="7" column="11" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="11" />
-          <folding />
+          <folding>
+            <marker date="1496758731000" expanded="true" signature="734:840" ph="/** 정적 파일이란? ...*/" />
+            <marker date="1496758731000" expanded="true" signature="1079:1162" ph="/** app.get[post, etc...] (URL경로, 라우터의 콜백 메소드); ...*/" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -918,6 +863,92 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="481">
           <caret line="259" column="0" lean-forward="true" selection-start-line="259" selection-start-column="0" selection-end-line="259" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/cardgame.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/timeline.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/board.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="588">
+          <caret line="37" column="74" lean-forward="false" selection-start-line="37" selection-start-column="63" selection-end-line="37" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/gameKeywordMatch.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding>
+            <marker date="1496759184000" expanded="true" signature="1271:1345" ph="..." />
+            <marker date="1496759184000" expanded="true" signature="3888:3968" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/gameKeywordMatch.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="20" column="18" lean-forward="false" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/keywordMatch.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="26" column="49" lean-forward="false" selection-start-line="26" selection-start-column="49" selection-end-line="26" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/npc.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="21" column="26" lean-forward="true" selection-start-line="11" selection-start-column="20" selection-end-line="21" selection-end-column="26" />
+          <folding>
+            <element signature="n#!!doc;n#setNPC#0" expanded="false" />
+            <marker date="1496755633000" expanded="true" signature="318:371" ph="..." />
+            <marker date="1496755633000" expanded="true" signature="318:372" ph="..." />
+            <marker date="1496755633000" expanded="true" signature="318:373" ph="..." />
+            <marker date="1496755633000" expanded="true" signature="318:375" ph="..." />
+            <marker date="1496755633000" expanded="true" signature="318:414" ph="..." />
+            <marker date="1496755633000" expanded="true" signature="318:444" ph="..." />
+            <marker date="1496755633000" expanded="true" signature="318:492" ph="..." />
+            <marker date="1496755633000" expanded="true" signature="318:588" ph="..." />
+            <marker date="1496755633000" expanded="true" signature="318:590" ph="..." />
+            <marker date="1496755633000" expanded="true" signature="318:622" ph="..." />
+            <marker date="1496755633000" expanded="true" signature="318:669" ph="..." />
+            <marker date="1496755633000" expanded="true" signature="318:670" ph="..." />
+            <marker date="1496755633000" expanded="true" signature="318:683" ph="..." />
+            <marker date="1496755633000" expanded="true" signature="318:787" ph="..." />
+            <marker date="1496755633000" expanded="true" signature="493:569" ph="..." />
+            <marker date="1496755633000" expanded="true" signature="493:588" ph="..." />
+            <marker date="1496755633000" expanded="true" signature="670:683" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/footer.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="8" column="2" lean-forward="false" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
           <folding />
         </state>
       </provider>
