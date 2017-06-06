@@ -6,7 +6,11 @@
 
 /* Main */
 
-	#main article {
-		opacity: 1;
-		margin: 4rem 0 0 0;
-	}
+#main article {
+	opacity: 1;
+	margin: 4rem 0 0 0;
+}
+
+#seconds{
+	text-align: right;
+}

@@ -1633,10 +1633,13 @@
 /* Card Game */
 
 	#container {
-  	padding-left: 0px;
-  	width: 1600;
-  	margin: 10px auto; }
-  #container:after {
+
+	padding-left: 20px;
+  	margin: 0 auto;
+  	width: 600px;
+  	}
+
+#container:after {
   	content: "";
   	display: table;
   	clear: both; }

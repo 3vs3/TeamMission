@@ -4,6 +4,12 @@
 
 #divTxtKeyword {
     margin-top: 50px;
+    color:#fff;
+}
+
+#divKeyword{
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 #divMemberImg{
@@ -14,7 +20,21 @@
 }
 .memberImg{
     width:100%;
-    max-width:170px;
+    max-width:210px;
     vertical-align: middle;
     margin: 0 auto;
+}
+
+.gameResult p{
+    text-align: right;
+    margin-right: 300px;
+    color: #cccccc;
+}
+
+.gameResult p:first-child{
+    margin-top: 50px;
+}
+
+#matchCnt{
+    color: red;
 }

@@ -43,7 +43,7 @@
   top: -10px;
 }
 #timeline .timeline-badge.timeline-filter-movement {
-  background-color: #ffffff;
+  background-color: #1B1F22;
   font-size: 1.7em;
   height: 35px;
   margin-left: -18px;
@@ -82,7 +82,7 @@
 #timeline .timeline-movement .timeline-item .timeline-panel {
   border: 1px solid #d4d4d4;
   border-radius: 3px;
-  background-color: #FFFFFF;
+  /*background-color: #FFFFFF;*/
   color: #666;
   padding: 10px;
   position: relative;

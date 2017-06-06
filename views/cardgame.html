@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <title></title>
   <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/common.css">
   <noscript><link rel="stylesheet" href="css/noscript.css" /></noscript>
 </head>
 
@@ -12,10 +13,10 @@
   <!-- #3 page_Card Game -->
   <article id="cardgame">
 
-    <h1>얼굴 맞추기 게임</h1>
-    <h3>카드 하나를 클릭하여 시작하세요.</h3>
-    <p><span id="seconds">00</span>:<span id="tens">00</span></p>
-    <p id="text"></p>
+    <h1 class="title">얼굴 맞추기 게임</h1>
+    <h3 class="summary">카드 하나를 클릭하여 시작하세요.</h3>
+    <p class="summary"><span id="seconds">00</span>:<span id="tens">00</span></p>
+    <p id="text" class="summary"></p>
     <div id="container">
       <script>
         var myCards = document.getElementById('container');
@@ -97,8 +98,12 @@
 
           if (counter === 4) {
             clearInterval(Interval);
-            text.innerHTML = "당신의 기록은 " + seconds + ":" + tens;
-            location.href="/timeline" ;
+
+            setTimeout(function () {
+                var message = "당신의 기록은 " + seconds + ":" + tens +" 입니다. 다음 단계로 이동할까요?";
+                alert(message);
+                location.href="/timeline" ;
+            },700);
           }
 
         }
