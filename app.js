@@ -26,7 +26,7 @@ global.gTens = 0;
 global.gStartTimer = function () {
   gTens++;
 }
-global.gStep = 1;
+global.gStep = 0;
 
 /**
  * 정적 파일이란?
