@@ -75,6 +75,7 @@ $(function(){
             location.href="/cardgame" ;
         }else{
             alert(score + '점으로 아쉽게 스탬프 획득을 실패하였습니다');
+            location.href="/ladder" ;
         }
     }
 

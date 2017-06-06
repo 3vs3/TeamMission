@@ -379,11 +379,30 @@ $(function(){
             alert('새로운 팀 멤버 ' + newMemName + '님과 다음 단계로 진행해봅시다. 출바알~');
         }
         setNewMember(newMemName);
+        if(newMemName == '최보연') {
+          newMemName = 'boyeon';
+        } else if(newMemName == '이다은') {
+          newMemName = 'daeun';
+        } else if(newMemName == '이동주') {
+          newMemName = 'dongju';
+        } else {
+          newMemName = 'jaejin';
+        }
+        location.href="/keyword?char=" + newMemName ;
     }
 
     // 선택된 멤버 재설정
     function setNewMember (newMemName) {
-        newMemName = newMemName;
+        if(newMemName == '최보연') {
+          newMemName = 'boyeon';
+        } else if(newMemName == '이다은') {
+          newMemName = 'daeun';
+        } else if(newMemName == '이동주') {
+          newMemName = 'dongju';
+        } else {
+          newMemName = 'jaejin';
+        }
+        //this.newMemName = newMemName;
         console.log(newMemName);
         //$('#divGameLadder').hide();
     }
