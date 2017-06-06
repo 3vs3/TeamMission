@@ -13,7 +13,6 @@ var c = new Client({
 
 exports.showBoardList = function(req, res) {
   clearInterval(gInterval);
-  gInterval = setInterval(gStartTimer, 10);
 
   var order = req.query.order;
   var sql = 'SELECT * FROM board order by';
@@ -35,37 +34,24 @@ exports.addBoard = function(req, res) {
   var user_name = req.body.user_name;
   var comment = req.body.comment;
   var character = global.gMemberName;
-  //var duration = global.gSeconds;
-  var duration = '';
-  calculateTime(gTens, duration);
+  var duration = calculateTime(gTens);
+
   var params = [user_name, comment, character, duration];
-  c.query('INSERT INTO board (user_name, comment, selected_character, duration) VALUES (?, ?, ?, ?)', params, function(err, result) {
+  c.query('INSERT INTO board (user_name, comment, selected_character, duration)'
+   + 'VALUES (?, ?, ?, SEC_TO_TIME(?))', params, function(err, result) {
     if(err)
       showError(err, res);
     res.redirect('/board');
   });
 };
 
-function calculateTime(tens, duration) {
+function calculateTime(tens) {
   var tempTens = tens % 100;
   var second = parseInt(tens / 100);
-  var min = parseInt(second / 60);
-  var hour = parseInt(min / 60);
+  //var min = parseInt(second / 60);
+  //var hour = parseInt(min / 60);
 
-  if(second <= 9) {
-    second = '0' + second;
-  }
-
-  if(min <= 9) {
-    min = '0' + min;
-  }
-
-  if(hour <= 9) {
-    hour = '0' + hour;
-  }
-
-  duration = hour + ':' + min + ':' + second;
-  console.log('tens : ' + tens + ', duration : ' + duration);
+  return second;
 }
 
 function showError(err, res) {
