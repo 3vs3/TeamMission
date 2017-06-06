@@ -28,6 +28,10 @@ global.gStartTimer = function () {
 }
 global.gStep = 1;
 
+
+app.locals.pretty = true ;  //페이지 소스보기 이쁘게
+
+
 /**
  * 정적 파일이란?
  * HTML 에서 사용되는 .js 파일, css 파일, image 파일

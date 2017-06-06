@@ -1,0 +1,33 @@
+
+doctype html(lang='en')
+head
+    meta(charset='UTF-8')
+    title 키워드 맞추기
+    script(src='js/jquery.min.js')
+    link
+body
+    div
+      .title 키워드 매칭 게임
+      .summary 처음 약 10초간 각 팀원의 키워드를 랜덤으로 보여드릴게요.
+      .summary 키워드를 다 보셨죠? 이제 누구의 키워드인지 맞춰주세요. 해당하는 캐릭터를 클릭하시면 점수가 +1됩니다~! 5점 이상이면 통과입니다!
+    #divKeyword
+    #divKeywordGameStart
+      #divTxtKeyword
+      .gameResult
+        p 맞춘 갯수:
+          span#matchCnt 0 /10
+
+
+        p 남은 게임 횟수 :
+          span#remainCnt 10
+
+    #divMemberImg
+      img#boyeon.memberImg(style='max-width:220px;', src='images/보연.jpeg')
+      img#dongju.memberImg(src='images/동주.jpeg')
+      img#2da.memberImg(src='images/다은.jpeg')
+      img#jaejin.memberImg(style='max-width:220px;', src='images/재진.png')
+    script(type='text/javascript', src='js/gameKeywordMatch.js')
+    link(rel='stylesheet', type='text/css', href='css/common.css')
+    link(rel='stylesheet', type='text/css', href='css/gameKeywordMatch.css')
+
+    include footer
