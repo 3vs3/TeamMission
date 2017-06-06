@@ -30,11 +30,10 @@ exports.showBoardList = function(req, res) {
     totalCount = results[0].count;
     totalPageNum = parseInt(totalCount / 10);
     if(totalCount % 10 !== 0) {
-      console.log('aa');
       totalPageNum += 1;
     }
     //console.dir(results);
-    console.log('totalCount : ' + totalCount);
+    //console.log('totalCount : ' + totalCount);
 
     var offset = 0;
     if(pageNum === undefined) {
@@ -44,7 +43,7 @@ exports.showBoardList = function(req, res) {
       offset = (pageNum - 1) * 10;
     }
 
-    console.log('offset : ' + offset);
+    //console.log('offset : ' + offset);
 
     var sql = 'SELECT * FROM board order by';
     if(order === 'ranking') {

@@ -9,32 +9,27 @@ $(document).ready(function() {
   // });
 
   $('.btn-filter').on('click', function() {
-    var $target = $(this).data('target');
-    $(location).attr('href', '?order=' + $target);
-
-    //$temp = $.url().param('order');
-    //$(location).attr('href', qs);
+    var target = $(this).data('target');
+    var uri = window.location.search;
+    window.location.search = updateQueryStringParameter(uri, 'order', target);
   });
 
   $('.btn-paging').on('click', function() {
     //alert('def');
-    var $pageNum = $(this).text();
-
-    $(location).attr('href', '?pageNum=' + $pageNum);
+    var pageNum = $(this).text();
+    var uri = window.location.search;
+    window.location.search = updateQueryStringParameter(uri, 'pageNum', pageNum);
   });
 
 });
 
-// Read a page's GET URL variables and return them as an associative array.
-function getUrlVars()
-{
-    var vars = [], hash;
-    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
-    for(var i = 0; i < hashes.length; i++)
-    {
-        hash = hashes[i].split('=');
-        vars.push(hash[0]);
-        vars[hash[0]] = hash[1];
-    }
-    return vars;
+function updateQueryStringParameter(uri, key, value) {
+  var re = new RegExp("([?&])" + key + "=.*?(&|$)", "i");
+  var separator = uri.indexOf('?') !== -1 ? "&" : "?";
+  if (uri.match(re)) {
+    return uri.replace(re, '$1' + key + "=" + value + '$2');
+  }
+  else {
+    return uri + separator + key + "=" + value;
+  }
 }
