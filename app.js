@@ -35,6 +35,7 @@ global.gIsClearPrevStep = function() {
 
   return true;
 }
+global.gIsAddedComment = false;
 
 
 app.locals.pretty = true ;  //페이지 소스보기 이쁘게

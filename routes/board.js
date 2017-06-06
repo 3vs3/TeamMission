@@ -58,7 +58,12 @@ exports.showBoardList = function(req, res) {
     c.query(sql, function(err2, results2) {
       if(err2)
         showError(err2, res);
-      res.render('board', {results:results2, gMemberName:gMemberName, totalPageNum:totalPageNum});
+      res.render('board', {
+        results:results2,
+        gMemberName:gMemberName,
+        totalPageNum:totalPageNum,
+        isAddedComment:gIsAddedComment
+      });
     });
 
     c.end();
@@ -77,6 +82,8 @@ exports.addBoard = function(req, res) {
    + 'VALUES (?, ?, ?, SEC_TO_TIME(?))', params, function(err, result) {
     if(err)
       showError(err, res);
+
+    gIsAddedComment = true;
     res.redirect('/board');
   });
 };
