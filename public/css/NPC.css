@@ -1,0 +1,40 @@
+#divNPC{
+    position: fixed;
+    bottom:20px;
+    right: 20px;
+}
+
+#divCharImg{
+    max-width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 50px;
+
+
+}
+.charImg{
+    width:100%;
+    max-width:150px;
+    vertical-align: middle;
+    margin: 0 auto;
+    border-radius: 10px 10px ;
+}
+
+.stampImg{
+    width:100%;
+    max-width:28px;
+    vertical-align: middle;
+    margin: 0 auto;
+}
+
+#divStamp{
+    margin-top: 3px;
+    text-align: center;
+}
+
+#divMemberName{
+    text-align: right;
+    position: fixed;
+    bottom:180px;
+    right: 80px;
+}

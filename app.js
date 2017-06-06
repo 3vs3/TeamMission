@@ -65,6 +65,9 @@ app.post('/board/add', board.addBoard);
 //패자부활전 : 사다리게임
 app.get('/ladder', ladder.startGame);
 
+//NPC test
+app.get('/NPC',ladder.startGame);
+
 //서버 구동
 app.listen(3000, function() {
   console.log('Connected 3000 port!');

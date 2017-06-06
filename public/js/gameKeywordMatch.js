@@ -4,6 +4,8 @@
 
 $(function(){
 
+    console.log(getQueryParams('char').char) ;
+    //setNPC();
     var arrKeywordBoyeon = ["CGV 5년간 VIP", "오늘도 나는 배가 고프다", "볼링", "인도", "배낭여행", "택시타는 것을 매우 싫어함", "몽니 (인디밴드)","자비에돌란", "갓헬프더걸", "죽음의 수용소"];
     var arrKeyword2da = ["안드로이드", "픽시", "서핑", "익스트림", "음악", "중국", "새로운 것", "재밌게 살자", "나는 아직 더 까매질수있다(?)", "아마추어 경륜대회"];
     var arrKeywordDongju = ["비전공자", "비개발자", "법학도", "우주비행사", "크리스토퍼 놀란", "만화책", "아이돌", "덕후는아니라능", "디지털노마드", "미니멀리스트"];
@@ -67,7 +69,6 @@ $(function(){
                 },
                 setScore: function(num) {
                     score += num;
-                    //console.log('score :' + score);
                 }
             }
         }
@@ -78,10 +79,10 @@ $(function(){
         if(score > 4){
             alert(score + '점을 획득하셨군요 통과입니다');
             // 스탬프 증가 함수 콜
-            location.href="/cardgame" ;
+            location.href="/cardgame?char="  + getQueryParams('char').char;
         }else{
             alert(score + '점으로 아쉽게 스탬프 획득을 실패하였습니다');
-            location.href="/ladder" ;
+            location.href="/ladder?char=" +getQueryParams('char').char;
         }
     }
 
@@ -89,7 +90,6 @@ $(function(){
     function checkKeywordRight(keword, memberName){
         for(var idx in arrKeywordTeam[memberName]){
             if(keword == arrKeywordTeam[memberName][idx] ){
-                //console.log(arrKeywordTeam[memberName][idx]);
                 return true;
             }
         }
@@ -107,11 +107,9 @@ $(function(){
                         var keyword = '';
                         var arrTxtColor = ['yellow', 'green','pink','blue'];
                         if(y==0){
-                            //console.log(changeEngNameToKorName(arrMemberNames[x]));
                             keyword = changeEngNameToKorName(arrMemberNames[x]);
                             txtColor = arrTxtColor[getRandomInt(0,3)];
                         }else{
-                            //console.log(x,y,tmpY,arrKeywordTeam[arrMemberNames[x]][tmpY-1]);
                             keyword = arrKeywordTeam[arrMemberNames[x]][tmpY-1];
                             txtColor = '#fff'
                         }
@@ -124,9 +122,9 @@ $(function(){
                                 $('#divKeyword').html('');
                                 $('#divKeywordGameStart').show();
                                 gameKeywordMatch();
-                            },200);
+                            },300);
                         }
-                    }, 2200*(x)+200*(y));
+                    }, 3300*(x)+300*(y));
                 })(i,j);
             }
         }
@@ -157,4 +155,6 @@ $(function(){
      function getRandomInt(min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
+
+
 });
