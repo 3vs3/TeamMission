@@ -1,9 +1,20 @@
 #footer
 
-
-  img.footerimage(src='images/'+membername)
-  p= gStep +"단계입니다."
-
   link(rel='stylesheet', type='text/css', href='css/footer.css')
+  link(rel='stylesheet', type='text/css', href='css/NPC.css')
+  script(src='js/npc.js')
 
-  
+  div
+  #divNPC
+    #divMemberName
+      span= gMemberNameKor
+    #divCharImg
+      img#imgNPC.charImg(src='images/' + membername)
+    #divStamp
+      - for(var i = 0; i < gStep; i++)
+        img.stampImg(src='images/stamp.png')
+
+
+
+
+

@@ -23,13 +23,7 @@ function setNPC(nameEng, stampCnt) {
 
     $('body').append(npcNode);
 
-    function setStampNode(stampCnt) {
-        var nodeStamp = '';
-        for(var i=0; i<stampCnt; i++){
-            nodeStamp += '  <img id="" class="stampImg" src="images/stamp.png" />';
-        }
-        return nodeStamp;
-    }
+
     
     function changeNameEngToNameKor(EngName) {
         var name = '보연';
@@ -61,5 +55,13 @@ function getQueryParams(qs) {
             vars[key] = value;
         });
     return vars;
+}
+
+function setStampNode(stampCnt) {
+    var nodeStamp = '';
+    for(var i=0; i<stampCnt; i++){
+        nodeStamp += '  <img id="" class="stampImg" src="images/stamp.png" />';
+    }
+    return nodeStamp;
 }
 

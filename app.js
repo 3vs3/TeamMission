@@ -31,7 +31,6 @@ global.gStep = 1;
 
 app.locals.pretty = true ;  //페이지 소스보기 이쁘게
 
-
 /**
  * 정적 파일이란?
  * HTML 에서 사용되는 .js 파일, css 파일, image 파일
@@ -68,9 +67,6 @@ app.post('/board/add', board.addBoard);
 
 //패자부활전 : 사다리게임
 app.get('/ladder', ladder.startGame);
-
-//NPC test
-app.get('/NPC',ladder.startGame);
 
 //서버 구동
 app.listen(3000, function() {
